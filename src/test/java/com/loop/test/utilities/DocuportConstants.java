@@ -18,4 +18,5 @@ public class DocuportConstants {
     public static final String CLIENT = "client";
     public static final String SUPERVISOR = "supervisor";
     public static final String EMPLOYEE = "employee";
+    public static final String WEBSITE_DOC_PORT = "https://app.docuport.app/login?redirect=%2F";
 }
