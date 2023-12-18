@@ -3,6 +3,7 @@ package com.loop.test.Day_07_windows;
 import com.loop.test.base.Test_base;
 import com.loop.test.utilities.BrowserUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class T2_windows extends Test_base {
@@ -37,6 +38,7 @@ public class T2_windows extends Test_base {
         System.out.println(driver.getTitle());
         Assert.assertTrue(driver.getTitle().contains("etsy"), "Results aren't matching!");
  */
-        BrowserUtils.windowsHandles(driver, "amazon.com", "amazon");
+        // BrowserUtils.windowsHandles(driver, "amazon.com", "amazon");
+        BrowserUtils.switchToWindow(driver, "facebook");
     }
 }

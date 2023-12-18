@@ -24,5 +24,23 @@ public class BrowserUtils {
         }
         Assert.assertTrue(driver.getTitle().toLowerCase().contains(expectedTitle));
     }
+
+    /**
+     * Validate if title name contains targetTitle name.
+     * @param driver
+     * @param targetTitle
+     * @author Loop Camp
+     * return: true or false
+     */
+    public static void switchToWindow (WebDriver driver, String targetTitle) {
+        String origin = driver.getWindowHandle();
+        for (String handle : driver.getWindowHandles()) {
+            driver.switchTo().window(handle);
+            if (driver.getTitle().contains(targetTitle)) {
+                return;
+            }
+        }
+        driver.switchTo().window(origin);
+    }
 }
 
